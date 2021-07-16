@@ -4,7 +4,7 @@ const SimpleInput = (props) => {
     const [enteredName, setEnteredName] = useState('')
     const [enteredNameTouched, setEnteredNameTouched] = useState(false)
 
-    const enteredNameIsValid = enteredName.trim() !== ''
+    const enteredNameIsValid = enteredName.trim() !==''
     const nameInputIsInvalid = !enteredNameIsValid && enteredNameTouched;
 
 
@@ -27,7 +27,7 @@ const SimpleInput = (props) => {
 
         console.log(enteredName)
 
-        // nameInputRef.current.value = '';  => NOT IDEAL, DON'T MANIPULATE THE DOM
+        nameInputRef.current.value = '';  //=> NOT IDEAL, DON'T MANIPULATE THE DOM
         setEnteredName('')
         setEnteredNameTouched(false)
     }
