@@ -34,14 +34,14 @@ const BasicForm = (props) => {
 
     let formIsValid = false
 
-    if(firstNameIsValid && lastNameIsValid && emailIsValid){
+    if (firstNameIsValid && lastNameIsValid && emailIsValid) {
         formIsValid = true
     }
 
     const submitHandler = (event) => {
         event.preventDefault()
 
-        if (!formIsValid){
+        if (!formIsValid) {
             return
         }
 
@@ -62,20 +62,29 @@ const BasicForm = (props) => {
             <div className='control-group'>
                 <div className={firstNameClasses}>
                     <label htmlFor='name'>First Name</label>
-                    <input type='text' id='name' value={firstNameValue} onChange={firstNameChangeHandler}
+                    <input type='text'
+                           id='name'
+                           value={firstNameValue}
+                           onChange={firstNameChangeHandler}
                            onBlur={firstNameBlurHandler}/>
                     {firstNameHasError && <p className="error-text">Please enter a first name.</p>}
                 </div>
                 <div className={lastNameClasses}>
                     <label htmlFor='name'>Last Name</label>
-                    <input type='text' id='name' value={lastNameValue} onChange={lastNameChangeHandler}
+                    <input type='text'
+                           id='name'
+                           value={lastNameValue}
+                           onChange={lastNameChangeHandler}
                            onBlur={lastNameBlurHandler}/>
                     {lastNameHasError && <p className="error-text">Please enter a last name.</p>}
                 </div>
             </div>
             <div className={emailClasses}>
                 <label htmlFor='name'>E-Mail Address</label>
-                <input type='text' id='name' value={emailValue} onChange={emailChangeHandler}
+                <input type='text'
+                       id='name'
+                       value={emailValue}
+                       onChange={emailChangeHandler}
                        onBlur={emailBlurHandler}/>
                 {emailHasError && <p className="error-text">Please enter a valid email address.</p>}
             </div>
