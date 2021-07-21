@@ -22,10 +22,9 @@ const AuthForm = () => {
 
         setIsLoading(true)
         if (isLogin) {
-
         } else {
             fetch(
-                'https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyAnDXy0a5_WvabVqkRY9NaHV9XQWlJWhXk',
+                'https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=[API_KEY]',
                 {
                     method: 'POST',
                     body: JSON.stringify({
