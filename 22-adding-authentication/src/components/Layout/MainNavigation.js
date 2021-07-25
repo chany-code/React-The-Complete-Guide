@@ -7,6 +7,9 @@ import AuthContext from "../../store/auth-context";
 const MainNavigation = () => {
     const authCtx = useContext(AuthContext)
 
+    const logoutHandler = (token)=>{
+        authCtx.logout()
+    }
     const isLoggedIn = authCtx.isLoggedIn
     return (
         <header className={classes.header}>
@@ -25,7 +28,7 @@ const MainNavigation = () => {
                     </li>}
                     {isLoggedIn &&
                     <li>
-                        <button>Logout</button>
+                        <button onClick={logoutHandler}>Logout</button>
                     </li>}
                 </ul>
             </nav>
